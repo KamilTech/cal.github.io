@@ -20,16 +20,15 @@ $(document).ready(function () {
 
     function update() {
         totalString = inputs.join("");
-        $("#calculator__display").html(totalString);
+        $("#score").val(totalString);
     }
 
     function getTotal() {
         totalString = inputs.join("");
-        $("#calculator__display").html(eval(totalString));
+        $("#score").val(eval(totalString));
     }
 
     $('button').on("click", function () {
-        console.log($(this).html());
         if (this.dataset.action === "clear") {
             inputs = [""];
             update();
